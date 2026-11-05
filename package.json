@@ -1,0 +1,23 @@
+{
+  "name": "ceasefire",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sovereign, Deterministic Edge Runtime & Capability Defense Architecture",
+  "type": "module",
+  "author": "Jeong Hoon (Jeffrey) Kim <jk9576@hanyang.ac.kr>",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --test packages/*/test/*.test.mjs",
+    "test:defender": "node --test packages/defender/test/*.test.mjs",
+    "test:waf": "node --test packages/waf/test/*.test.mjs",
+    "test:core": "node --test packages/core/test/*.test.mjs",
+    "test:cli": "node --test packages/cli/test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@electron/asar": "^4.3.1"
+  }
+}

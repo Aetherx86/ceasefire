@@ -1,0 +1,9 @@
+{
+  "name": "@ceasefire/defender",
+  "version": "0.1.0",
+  "description": "Atomic ASAR extraction, Electron fuse verification, and REA-backed AST defensive auditor",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "license": "Apache-2.0"
+}
