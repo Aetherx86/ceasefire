@@ -1,5 +1,5 @@
 import { readdir, readFile, writeFile, mkdir } from "node:fs/promises";
-import { join, dirname } from "node:path";
+import { join } from "node:path";
 import { stripTypeScriptTypes } from "node:module";
 
 async function buildAll() {
@@ -27,8 +27,10 @@ async function buildAll() {
         const destJs = join(srcDir, file.replace(/\.ts$/, ".js"));
         await writeFile(destJs, stripped, "utf-8");
 
-        // Also write to distDir as .mjs
+        // Write both .js and .mjs to distDir
+        const distJs = join(distDir, file.replace(/\.ts$/, ".js"));
         const distMjs = join(distDir, file.replace(/\.ts$/, ".mjs"));
+        await writeFile(distJs, stripped, "utf-8");
         await writeFile(distMjs, stripped, "utf-8");
       }
     }
