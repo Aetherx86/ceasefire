@@ -157,32 +157,32 @@ Ceasefire mandates that all verification tests run as an adversarial contest whe
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Red as  Red Team (Adversary / Exploit Harness)
-    participant Box as  Scratch Sandbox Boundary
-    participant Blue as ️ Blue Team (Ceasefire Defense Kernel)
+    actor Red as Red Team (Adversary / Exploit Harness)
+    participant Box as Scratch Sandbox Boundary
+    participant Blue as Blue Team (Ceasefire Defense Kernel)
 
     Note over Red,Blue: Phase 1: Ingestion & Path Traversal Attack
     Red->>Box: Inject malicious archive with directory slip (../../etc/shadow)
     Box->>Blue: Invokes assertPathConfinement()
-    Blue-->>Red:  BLOCKED: Throws PathTraversalException; zero escape outside scratch root
+    Blue-->>Red: BLOCKED: Throws PathTraversalException; zero escape outside scratch root
 
     Note over Red,Blue: Phase 2: AST Injection & Electron Trojanization
     Red->>Box: Write trojan script: nodeIntegration: true + eval('id')
     Box->>Blue: Invokes analyzeUnpackedAst()
-    Blue-->>Red: ️ INTERCEPTED: Score collapsed to 30/100; flags CRITICAL misconfig alerts
+    Blue-->>Red: INTERCEPTED: Score collapsed to 30/100; flags CRITICAL misconfig alerts
 
     Note over Red,Blue: Phase 3: Binary Fuse Stripping & Downgrade
     Red->>Box: Supply stripped/unfused Electron executable
     Box->>Blue: Invokes inspectElectronFuses()
-    Blue-->>Red:  BLOCKED: onlyLoadAppFromAsar missing; execution halted
+    Blue-->>Red: BLOCKED: onlyLoadAppFromAsar missing; execution halted
 
     Note over Red,Blue: Phase 4: Edge CDN Flap & Turnstile Evasion
     Red->>Blue: Burst 1-tick availability flip & spoofed Turnstile header
-    Blue-->>Red: ⏳ MITIGATED: Hysteresis quarantines 1-tick ghost state; DFA tags Cloudflare interstitial
+    Blue-->>Red: MITIGATED: Hysteresis quarantines 1-tick ghost state; DFA tags Cloudflare interstitial
 
     Note over Red,Blue: Phase 5: Privilege Escalation Attempt
     Red->>Blue: Request unauthenticated database/drop_table mutation
-    Blue-->>Red:  TRAPPED: Non-blocking simulation creates provisional sandbox; operator rejects live commit
+    Blue-->>Red: TRAPPED: Non-blocking simulation creates provisional sandbox; operator rejects live commit
 ```
 
 ### Live Visualizer Telemetry

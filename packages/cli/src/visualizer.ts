@@ -12,7 +12,7 @@ export interface AttackDefenseEvent {
 export function renderAttackDefenseMatrix(events: AttackDefenseEvent[]): string {
   const lines: string[] = [];
   lines.push("┌────────────────────────────────────────────────────────────────────────────────────────┐");
-  lines.push("│  🔥 CEASEFIRE SANDBOXED ATTACK & DEFENSE SIMULATION VISUALIZER                         │");
+  lines.push("│  CEASEFIRE SANDBOXED ATTACK & DEFENSE SIMULATION VISUALIZER                            │");
   lines.push("├──────────────────────┬───────────────────────────┬──────────────────────────┬──────────┤");
   lines.push("│ Attack Phase         │ Red Team Attack Vector    │ Blue Team Defense Counter│ Status   │");
   lines.push("├──────────────────────┼───────────────────────────┼──────────────────────────┼──────────┤");

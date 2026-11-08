@@ -11,7 +11,7 @@ import { detectChallenge, HysteresisTracker, signEnvelope, verifySignature } fro
 import { GatekeeperMesh, SandboxEnvironment } from "../../core/src/index.js";
 import { renderAttackDefenseMatrix } from "../../cli/src/visualizer.js";
 
-describe("🔥 Ceasefire Sandboxed Adversarial Suite: Red Team vs. Blue Team", () => {
+describe("Ceasefire Sandboxed Adversarial Suite: Red Team vs. Blue Team", () => {
   const events = [];
 
   it("Scenario 1 [Offense: Path Traversal Slip] vs. [Defense: Confinement Barrier]", async () => {

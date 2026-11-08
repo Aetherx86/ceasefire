@@ -36,7 +36,7 @@ async function buildAll() {
     }
   }
 
-  console.log("✅ Ceasefire: all packages compiled and types stripped via Node built-ins.");
+  console.log("[OK] Ceasefire: all packages compiled and types stripped via Node built-ins.");
 }
 
 buildAll().catch((err) => {
