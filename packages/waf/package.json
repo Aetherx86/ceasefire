@@ -1,6 +1,6 @@
 {
   "name": "@ceasefire/waf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Deterministic edge challenge telemetry, CDN flap hysteresis, and constant-time webhook signatures",
   "type": "module",
   "main": "src/index.js",

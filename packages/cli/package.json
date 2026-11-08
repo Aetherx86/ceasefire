@@ -1,6 +1,6 @@
 {
   "name": "@ceasefire/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unified CLI binary and attack visualizer for Ceasefire",
   "type": "module",
   "bin": {

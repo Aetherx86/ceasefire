@@ -1,6 +1,6 @@
 {
   "name": "@ceasefire/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sovereign capability runtime, Gatekeeper mesh, and two-phase simulation engine",
   "type": "module",
   "main": "src/index.js",

@@ -346,6 +346,10 @@ Ceasefire enforces the following architectural invariants:
 | **INV-04** | `CONSTANT_TIME_VERIFICATION` | All HMAC-SHA256 signatures, authentication tokens, and capability nonces must be compared using constant-time cryptographic primitives (`crypto.timingSafeEqual`). |
 | **INV-05** | `DETERMINISTIC_REPRODUCIBILITY` | Given identical input fixtures and configurations, all audit ledgers and WAF scoring state machines must produce byte-identical JSON outputs. |
 
+### Dependency audit
+
+As of 0.1.1 (2026-11-08), `npm audit` reports no known vulnerabilities. The `glob` and `minimatch` versions that `@electron/asar` pulls in are pinned to patched releases with npm overrides. See [`CHANGELOG.md`](CHANGELOG.md).
+
 ---
 
 ## 10. License & Attribution

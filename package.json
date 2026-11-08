@@ -1,6 +1,6 @@
 {
   "name": "ceasefire",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Sovereign, Deterministic Edge Runtime & Capability Defense Architecture",
   "type": "module",
@@ -19,5 +19,11 @@
   },
   "devDependencies": {
     "@electron/asar": "^4.3.1"
+  },
+  "overrides": {
+    "@electron/asar": {
+      "glob": "^14.0.4",
+      "minimatch": "^11.0.5"
+    }
   }
 }
